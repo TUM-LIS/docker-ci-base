@@ -1,0 +1,2 @@
+# Give service account root permissions in container
+sa ALL=(ALL) NOPASSWD:ALL

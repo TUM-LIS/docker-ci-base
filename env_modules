@@ -1,0 +1,6 @@
+# This file is sourced into every bash session
+# Environment modules
+if [ -r "$MODULES_INIT_BASH" ]; then
+    . $MODULES_INIT_BASH
+fi
+
