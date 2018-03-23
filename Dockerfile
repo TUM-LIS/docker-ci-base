@@ -13,7 +13,9 @@ LABEL description="Base image for CI builds at TUM LIS with GitLab Runner"
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y git-core libtcl8.5 curl gosu sudo \
-        build-essential \
+        build-essential automake autoconf pkg-config tcl \
+        python python-pip \
+        python3 python3-dev python3.5-venv python3-pip libffi-dev \
         dc fontconfig libaudio2 libc6 libfontconfig1 libfreetype6 libgcc1 \
         libglib2.0-0 libice6 libjpeg8 libmng2 libpng12-0 libsm6 libstdc++6 \
         libtiff5 libx11-6 libxext6 libxi6 libxrender1 zlib1g libxrandr2 \
