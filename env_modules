@@ -2,5 +2,8 @@
 # Environment modules
 if [ -r "$MODULES_INIT_BASH" ]; then
     . $MODULES_INIT_BASH
+else
+  echo "Unable to load environment modules support." >&2
+  echo "Reading file '$MODULES_INIT_BASH' failed." >&2
 fi
 
