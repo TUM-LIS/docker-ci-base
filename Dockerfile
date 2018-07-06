@@ -19,6 +19,7 @@ RUN apt-get update \
         dc fontconfig libaudio2 libc6 libfontconfig1 libfreetype6 libgcc1 \
         libglib2.0-0 libice6 libjpeg8 libmng2 libpng12-0 libsm6 libstdc++6 \
         libtiff5 libx11-6 libxext6 libxi6 libxrender1 zlib1g libxrandr2 \
+        libelf1 \
     && rm -rf /var/lib/apt/lists/*
 
 
