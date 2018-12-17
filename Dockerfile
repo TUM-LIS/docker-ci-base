@@ -8,8 +8,9 @@ LABEL description="Base image for CI builds at TUM LIS with GitLab Runner"
 # and build tools to avoid fetching them again for every build.
 #
 # Tested tools:
-# - Xilinx Vivado 2017.4
+# - Xilinx Vivado 2017.4, 2018.2
 # - Synopsys VCS M-2017.3
+# - Synopsys Spyglass N-2017.12
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y git-core libtcl8.5 curl gosu sudo \
@@ -19,8 +20,8 @@ RUN apt-get update \
         dc fontconfig libaudio2 libc6 libfontconfig1 libfreetype6 libgcc1 \
         libglib2.0-0 libice6 libjpeg8 libmng2 libpng12-0 libsm6 libstdc++6 \
         libtiff5 libx11-6 libxext6 libxi6 libxrender1 zlib1g libxrandr2 \
-        libelf1 \
-    && rm -rf /var/lib/apt/lists/*
+        libelf1 lsb-release \
+    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 
 # use bash as default shell
